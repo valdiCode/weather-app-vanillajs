@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 15rem;
+    height: 32.5rem;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.29);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.29);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.29);
+}
+
+.container.day{
+    background-image: url("./images/clear_sky.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container.night{
+    background-image: url("./images/dark_night.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inputTemp{
+    margin: 1rem auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+}
+
+.search_submit{
+    display: flex;
+}
+
+.search_submit > button {
+    visibility: hidden;
+}
+
+
+.search{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.inputTemp_number{
+    display: flex;
+    align-items: center;
+}
+
+.inputTemp_celsius{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.inputTemp_symbol{
+    font-size: 3rem;
+    color: white;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    justify-content: center;
+    align-items: center;
+}
+
+.location_date{
+    margin: 1.5rem;
+}
+
+.inputTemp_description,
+.location_city{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #333;
+}
+
+.inputTemp_description{
+    text-transform: capitalize;
+}
+
+.container.night    .inputTemp_description,
+.container.night    .location_city,
+.container.night    .location_date,
+.container.night    .weather_min,
+.container.night    .weather_max{
+    color: white;
+}
+
+.weather{
+    display: flex;
+    flex: 0.1;
+    border-top: 2px solid #333;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weather_min > span{
+    font-size: 1.4rem;
+    color: blue;
+}
+
+.weather_max > span{
+    font-size: 1.4rem;
+    color: tomato;
+}
